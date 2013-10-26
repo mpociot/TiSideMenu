@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		24416B8111C4CA220047AFDD /* Build & Test */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */;
+			buildPhases = (
+				24416B8011C4CA220047AFDD /* ShellScript */,
+			);
+			dependencies = (
+				24416B8511C4CA280047AFDD /* PBXTargetDependency */,
+			);
+			name = "Build & Test";
+			productName = "Build & test";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		1EA8BECD181C66B700880B36 /* RECommonFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BEC7181C66B700880B36 /* RECommonFunctions.h */; };
+		1EA8BECE181C66B700880B36 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BEC8181C66B700880B36 /* RECommonFunctions.m */; };
+		1EA8BECF181C66B700880B36 /* RESideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BEC9181C66B700880B36 /* RESideMenu.h */; };
+		1EA8BED0181C66B700880B36 /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BECA181C66B700880B36 /* RESideMenu.m */; };
+		1EA8BED1181C66B700880B36 /* UIViewController+RESideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BECB181C66B700880B36 /* UIViewController+RESideMenu.h */; };
+		1EA8BED2181C66B700880B36 /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BECC181C66B700880B36 /* UIViewController+RESideMenu.m */; };
+		1EA8BED5181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BED3181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.h */; };
+		1EA8BED6181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BED4181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m */; };
+		1EA8BED9181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BED7181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h */; };
+		1EA8BEDA181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BED8181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m */; };
+		24DD6CF91134B3F500162E58 /* DeMarcelpociotSidemenuModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* DeMarcelpociotSidemenuModule.h */; };
+		24DD6CFA1134B3F500162E58 /* DeMarcelpociotSidemenuModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* DeMarcelpociotSidemenuModule.m */; };
+		24DE9E1111C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h */; };
+		24DE9E1211C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.m */; };
+		AA747D9F0F9514B9006C5449 /* DeMarcelpociotSidemenu_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* DeMarcelpociotSidemenu_Prefix.pch */; };
+		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		24416B8411C4CA280047AFDD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TiSideMenu;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1EA8BEC7181C66B700880B36 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		1EA8BEC8181C66B700880B36 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		1EA8BEC9181C66B700880B36 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		1EA8BECA181C66B700880B36 /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		1EA8BECB181C66B700880B36 /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		1EA8BECC181C66B700880B36 /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		1EA8BED3181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeMarcelpociotSidemenuSideMenuProxy.h; path = Classes/DeMarcelpociotSidemenuSideMenuProxy.h; sourceTree = "<group>"; };
+		1EA8BED4181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeMarcelpociotSidemenuSideMenuProxy.m; path = Classes/DeMarcelpociotSidemenuSideMenuProxy.m; sourceTree = "<group>"; };
+		1EA8BED7181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeMarcelpociotSidemenuSideMenu.h; path = Classes/DeMarcelpociotSidemenuSideMenu.h; sourceTree = "<group>"; };
+		1EA8BED8181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeMarcelpociotSidemenuSideMenu.m; path = Classes/DeMarcelpociotSidemenuSideMenu.m; sourceTree = "<group>"; };
+		24DD6CF71134B3F500162E58 /* DeMarcelpociotSidemenuModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeMarcelpociotSidemenuModule.h; path = Classes/DeMarcelpociotSidemenuModule.h; sourceTree = "<group>"; };
+		24DD6CF81134B3F500162E58 /* DeMarcelpociotSidemenuModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeMarcelpociotSidemenuModule.m; path = Classes/DeMarcelpociotSidemenuModule.m; sourceTree = "<group>"; };
+		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
+		24DE9E0F11C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeMarcelpociotSidemenuModuleAssets.h; path = Classes/DeMarcelpociotSidemenuModuleAssets.h; sourceTree = "<group>"; };
+		24DE9E1011C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeMarcelpociotSidemenuModuleAssets.m; path = Classes/DeMarcelpociotSidemenuModuleAssets.m; sourceTree = "<group>"; };
+		AA747D9E0F9514B9006C5449 /* DeMarcelpociotSidemenu_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeMarcelpociotSidemenu_Prefix.pch; sourceTree = SOURCE_ROOT; };
+		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D2AAC07E0554694100DB518D /* libDeMarcelpociotSidemenu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDeMarcelpociotSidemenu.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC07C0554694100DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DFFF38A50411DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC07E0554694100DB518D /* libDeMarcelpociotSidemenu.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* TiSideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AEFE84172EC02AAC07 /* Classes */,
+				32C88DFF0371C24200C91783 /* Other Sources */,
+				0867D69AFE84028FC02AAC07 /* Frameworks */,
+				034768DFFF38A50411DB9C8B /* Products */,
+			);
+			name = TiSideMenu;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		08FB77AEFE84172EC02AAC07 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1EA8BEC6181C66B700880B36 /* RESideMenu */,
+				24DE9E0F11C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h */,
+				24DE9E1011C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.m */,
+				24DD6CF71134B3F500162E58 /* DeMarcelpociotSidemenuModule.h */,
+				24DD6CF81134B3F500162E58 /* DeMarcelpociotSidemenuModule.m */,
+				1EA8BED3181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.h */,
+				1EA8BED4181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m */,
+				1EA8BED7181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h */,
+				1EA8BED8181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1EA8BEC6181C66B700880B36 /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				1EA8BEC7181C66B700880B36 /* RECommonFunctions.h */,
+				1EA8BEC8181C66B700880B36 /* RECommonFunctions.m */,
+				1EA8BEC9181C66B700880B36 /* RESideMenu.h */,
+				1EA8BECA181C66B700880B36 /* RESideMenu.m */,
+				1EA8BECB181C66B700880B36 /* UIViewController+RESideMenu.h */,
+				1EA8BECC181C66B700880B36 /* UIViewController+RESideMenu.m */,
+			);
+			name = RESideMenu;
+			path = Classes/RESideMenu;
+			sourceTree = "<group>";
+		};
+		32C88DFF0371C24200C91783 /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AA747D9E0F9514B9006C5449 /* DeMarcelpociotSidemenu_Prefix.pch */,
+				24DD6D1B1134B66800162E58 /* titanium.xcconfig */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC07A0554694100DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA8BED5181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.h in Headers */,
+				AA747D9F0F9514B9006C5449 /* DeMarcelpociotSidemenu_Prefix.pch in Headers */,
+				1EA8BED9181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h in Headers */,
+				24DD6CF91134B3F500162E58 /* DeMarcelpociotSidemenuModule.h in Headers */,
+				1EA8BED1181C66B700880B36 /* UIViewController+RESideMenu.h in Headers */,
+				1EA8BECD181C66B700880B36 /* RECommonFunctions.h in Headers */,
+				1EA8BECF181C66B700880B36 /* RESideMenu.h in Headers */,
+				24DE9E1111C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC07D0554694100DB518D /* TiSideMenu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TiSideMenu" */;
+			buildPhases = (
+				D2AAC07A0554694100DB518D /* Headers */,
+				D2AAC07B0554694100DB518D /* Sources */,
+				D2AAC07C0554694100DB518D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TiSideMenu;
+			productName = TiSideMenu;
+			productReference = D2AAC07E0554694100DB518D /* libDeMarcelpociotSidemenu.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TiSideMenu" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* TiSideMenu */;
+			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC07D0554694100DB518D /* TiSideMenu */,
+				24416B8111C4CA220047AFDD /* Build & Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		24416B8011C4CA220047AFDD /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here\n\npython \"${TITANIUM_SDK}/titanium.py\" run --dir=\"${PROJECT_DIR}\"\nexit $?\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC07B0554694100DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EA8BED0181C66B700880B36 /* RESideMenu.m in Sources */,
+				1EA8BEDA181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m in Sources */,
+				24DD6CFA1134B3F500162E58 /* DeMarcelpociotSidemenuModule.m in Sources */,
+				1EA8BED2181C66B700880B36 /* UIViewController+RESideMenu.m in Sources */,
+				1EA8BECE181C66B700880B36 /* RECommonFunctions.m in Sources */,
+				24DE9E1211C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.m in Sources */,
+				1EA8BED6181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2AAC07D0554694100DB518D /* TiSideMenu */;
+			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB921F08733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/DeMarcelpociotSidemenu.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DeMarcelpociotSidemenu_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DeMarcelpociotSidemenu;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922008733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DSTROOT = /tmp/DeMarcelpociotSidemenu.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DeMarcelpociotSidemenu_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DeMarcelpociotSidemenu;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		1DEB922308733DC00010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DSTROOT = /tmp/DeMarcelpociotSidemenu.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DeMarcelpociotSidemenu_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				OTHER_CFLAGS = (
+					"-DDEBUG",
+					"-DTI_POST_1_2",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DeMarcelpociotSidemenu;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Debug;
+		};
+		1DEB922408733DC00010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				DSTROOT = /tmp/DeMarcelpociotSidemenu.dst;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DeMarcelpociotSidemenu_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_RETURN_TYPE = NO;
+				GCC_WARN_MISSING_PARENTHESES = NO;
+				GCC_WARN_SHADOW = NO;
+				GCC_WARN_STRICT_SELECTOR_MATCH = NO;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_PARAMETER = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DTI_POST_1_2";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = DeMarcelpociotSidemenu;
+				RUN_CLANG_STATIC_ANALYZER = NO;
+				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "";
+			};
+			name = Release;
+		};
+		24416B8211C4CA220047AFDD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build & test";
+			};
+			name = Debug;
+		};
+		24416B8311C4CA220047AFDD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				PRODUCT_NAME = "Build & test";
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "TiSideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB921F08733DC00010E9CD /* Debug */,
+				1DEB922008733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TiSideMenu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB922308733DC00010E9CD /* Debug */,
+				1DEB922408733DC00010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		24416B8A11C4CA520047AFDD /* Build configuration list for PBXAggregateTarget "Build & Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				24416B8211C4CA220047AFDD /* Debug */,
+				24416B8311C4CA220047AFDD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}
