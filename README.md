@@ -53,6 +53,31 @@ Manually showing / hiding the menu:
 
 `win.presentMenuViewController()`
 
+Events
+===
+
+	
+	win.addEventListener("willShowMenuViewController",function()
+	{
+		alert("Will show menu view controller");
+	});
+
+	win.addEventListener("didShowMenuViewController",function()
+	{
+		alert("Did show menu view controller");
+	});
+
+	win.addEventListener("willHideMenuViewController",function()
+	{
+		alert("Will hide menu view controller");
+	});
+
+	win.addEventListener("didHideMenuViewController",function()
+	{
+		alert("Did hide menu view controller");
+	});
+
+
 
 ABOUT THE AUTHOR
 ========================
