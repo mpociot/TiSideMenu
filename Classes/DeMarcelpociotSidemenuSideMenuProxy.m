@@ -31,4 +31,31 @@
     TiThreadPerformOnMainThread(^{[(DeMarcelpociotSidemenuSideMenu*)[self view] hideMenuViewController:args];}, NO);
 }
 
+# pragma Deleagte methods
+
+
+- (void)sideMenu:(RESideMenu *)sideMenu willShowMenuViewController:(UIViewController *)menuViewController
+{
+    if ([self _hasListeners:@"willShowMenuViewController"]) {
+        [self fireEvent:@"willShowMenuViewController" withObject:@{} propagate:YES];
+    }
+}
+- (void)sideMenu:(RESideMenu *)sideMenu didShowMenuViewController:(UIViewController *)menuViewController
+{
+    if ([self _hasListeners:@"didShowMenuViewController"]) {
+        [self fireEvent:@"didShowMenuViewController" withObject:@{} propagate:YES];
+    }
+}
+- (void)sideMenu:(RESideMenu *)sideMenu willHideMenuViewController:(UIViewController *)menuViewController
+{
+    if ([self _hasListeners:@"willHideMenuViewController"]) {
+        [self fireEvent:@"willHideMenuViewController" withObject:@{} propagate:YES];
+    }
+}
+- (void)sideMenu:(RESideMenu *)sideMenu didHideMenuViewController:(UIViewController *)menuViewController
+{
+    if ([self _hasListeners:@"didHideMenuViewController"]) {
+        [self fireEvent:@"didHideMenuViewController" withObject:@{} propagate:YES];
+    }
+}
 @end

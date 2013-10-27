@@ -13,6 +13,7 @@ var leftTableView = Ti.UI.createTableView({
 		{title:'Row 1',color: 'white'},
 		{title:'Row 2',color: 'white'},  
 		{title:'Change Center Window',color: 'white'},
+		{title:'Push new Window',color: 'white'},
 		{title:'Reset Window',color: 'white'}
 	]
 });
@@ -32,6 +33,13 @@ leftTableView.addEventListener("click", function(e){
 			win.hideMenuViewController();
 			break;
 		case 3:
+			var newWin = Ti.UI.createWindow({
+				backgroundColor:'red'
+			});
+			contentWindow.openWindow(newWin);
+			win.hideMenuViewController();
+			break;
+		case 4:
 			win.setContentWindow( createContentWindow() );
 			win.hideMenuViewController();
 			break;
@@ -149,11 +157,32 @@ function createContentWindow()
 	});
 	return navController;
 }
-
+var contentWindow = createContentWindow();
 var win = TiSideMenu.createSideMenu({
-	contentView: 		createContentWindow(),
+	contentView: 		contentWindow,
 	menuView: 			menuWin,
 	backgroundImage: 	'stars.png'
+});
+
+
+win.addEventListener("willShowMenuViewController",function()
+{
+	alert("Will show menu view controller");
+});
+
+win.addEventListener("didShowMenuViewController",function()
+{
+	alert("Did show menu view controller");
+});
+
+win.addEventListener("willHideMenuViewController",function()
+{
+	alert("Will hide menu view controller");
+});
+
+win.addEventListener("didHideMenuViewController",function()
+{
+	alert("Did hide menu view controller");
 });
 
 

@@ -59,6 +59,7 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
         [controllerView setFrame:[self bounds]];
         [self addSubview:controllerView];
         
+        [controller setDelegate:(DeMarcelpociotSidemenuSideMenuProxy *)[self proxy]];
         
         [controller viewWillAppear:NO];
         [controller viewDidAppear:NO];

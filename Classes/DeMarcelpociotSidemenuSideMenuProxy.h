@@ -6,9 +6,10 @@
  */
 #import "TiBase.h"
 #import "TiWindowProxy.h"
+#import "RESideMenu.h"
 #import "DeMarcelpociotSidemenuSideMenu.h"
 
-@interface DeMarcelpociotSidemenuSideMenuProxy : TiWindowProxy {
+@interface DeMarcelpociotSidemenuSideMenuProxy : TiWindowProxy<RESideMenuDelegate> {
 
 }
 
