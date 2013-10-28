@@ -161,7 +161,12 @@ var contentWindow = createContentWindow();
 var win = TiSideMenu.createSideMenu({
 	contentView: 		contentWindow,
 	menuView: 			menuWin,
-	backgroundImage: 	'stars.png'
+	backgroundImage: 	'stars.png',
+	contentViewScaleValue: 0.2,
+	scaleContentView: true,
+	panGestureEnabled: false,
+	scaleBackgroundImageView: false,
+	parallaxEnabled: false
 });
 
 

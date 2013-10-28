@@ -25,7 +25,12 @@ Use TiSideMenu as a replacement for your root window.
 	var win = TiSideMenu.createSideMenu({
 		contentView: 		contentView,
 		menuView: 			menuView,
-		backgroundImage: 	'stars.png'
+		backgroundImage: 	'stars.png',
+		contentViewScaleValue: 0.2, 		// Default 0.5
+		scaleContentView: true,				// Default: true
+		panGestureEnabled: false,			// Default: true
+		scaleBackgroundImageView: false,	// Default: true
+		parallaxEnabled: false				// Default: true
 	});
 	win.open();
 

@@ -47,13 +47,26 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
         // navController or TiWindow ?
         UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]) : ControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]);
         
-		TiViewProxy *leftWindow = [self.proxy valueForUndefinedKey:@"menuView"];
-        UIViewController *menuViewController = ControllerForViewProxy(leftWindow);
+		TiViewProxy *leftWindow                 = [self.proxy valueForUndefinedKey:@"menuView"];
+        UIViewController *menuViewController    = ControllerForViewProxy(leftWindow);
         
         controller = [[RESideMenu alloc] initWithContentViewController:centerWindow
                                                     menuViewController:menuViewController];
         
         controller.backgroundImage = [TiUtils image:[self.proxy valueForUndefinedKey:@"backgroundImage"] proxy:self.proxy];
+        
+        // Check creation time parameters
+        // setContentViewScaleValue
+        [controller setContentViewScaleValue:[TiUtils floatValue:[self.proxy valueForUndefinedKey:@"contentViewScaleValue"] def:0.5]];
+        
+        [controller setScaleContentView:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"scaleContentView"] def:YES]];
+        
+        [controller setPanGestureEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"panGestureEnabled"] def:YES]];
+        
+        [controller setScaleBackgroundImageView:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"scaleBackgroundImageView"] def:YES]];
+        
+        [controller setParallaxEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"parallaxEnabled"] def:YES]];
+        
         
         UIView * controllerView = [controller view];
         [controllerView setFrame:[self bounds]];
