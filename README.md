@@ -9,8 +9,7 @@ Wrapper module for the great [RESideMenu](https://github.com/romaonthego/RESideM
 
 <img src="https://github.com/mpociot/TiSideMenu/raw/master/Demo.gif" alt="RESideMenu Screenshot" width="320" height="568" />
 
-Usage
-====================
+### Usage
 
 Use TiSideMenu as a replacement for your root window.
 
@@ -26,16 +25,15 @@ Use TiSideMenu as a replacement for your root window.
 		contentView: 		contentView,
 		menuView: 			menuView,
 		backgroundImage: 	'stars.png',
-		contentViewScaleValue: 0.2, 		// Default 0.5
-		scaleContentView: true,				// Default: true
-		panGestureEnabled: false,			// Default: true
-		scaleBackgroundImageView: false,	// Default: true
-		parallaxEnabled: false				// Default: true
+		contentViewScaleValue: 0.2,
+		scaleContentView: true,		
+		panGestureEnabled: false,	
+		scaleBackgroundImageView: false,
+		parallaxEnabled: false
 	});
 	win.open();
 
-Configuration
-===
+### Configuration
 	
 * Enable / Disable the pan gesture 
 	`win.setPanGestureEnabled( true / false );`
@@ -57,6 +55,56 @@ Manually showing / hiding the menu:
 `win.hideMenuViewController()`
 
 `win.presentMenuViewController()`
+
+### Options
+
+
+#### backgroundImage
+
+Type: `Blog / Image URL`  
+Default: `empty String`
+
+Background image to use for the menu.
+
+#### contentViewScaleValue
+
+Type: `Float`  
+Default: `0.5`
+
+Scale value used for the content view when the menu is shown.
+
+#### scaleContentView
+
+Type: `Boolean`  
+Default: `true`
+
+Should the content view be scaled when the menu gets displayed.
+
+
+#### panGestureEnabled
+
+Type: `Boolean`  
+Default: `true`
+
+Should the pan gesture be available for showing the menu.
+
+#### scaleBackgroundImageView
+
+Type: `Boolean`  
+Default: `true`
+
+Should the background image view be scaled for showing the menu.
+
+#### parallaxEnabled
+
+Type: `Boolean`  
+Default: `true`
+
+Enable / disable the parallax effect.
+
+
+
+
 
 Events
 ===
