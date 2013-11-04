@@ -123,12 +123,11 @@
     if( self.blurBackgroundView )
     {
         self.backgroundBlurView = [[FXBlurView alloc] initWithFrame:self.view.bounds];
+        self.backgroundBlurView.dynamic = NO;
         if( self.tintColor != nil )
         {
             self.backgroundBlurView.tintColor = self.tintColor;
-            NSLog(@"Tint color: %@",self.tintColor);
         }
-        NSLog(@"Blur radius: %f",self.blurRadius);
         self.backgroundBlurView.blurRadius = self.blurRadius;
         [self.view addSubview:self.backgroundBlurView];
     }
@@ -202,7 +201,11 @@
         [self.contentViewController beginAppearanceTransition:NO animated:YES];
         [self.menuViewController beginAppearanceTransition:YES animated:YES];
     }
-    
+    if( self.blurBackgroundView )
+    {
+        self.backgroundBlurView.dynamic = YES;
+    }
+
     [UIView animateWithDuration:self.animationDuration animations:^{
         if (self.scaleContentView) {
             self.contentViewController.view.transform = CGAffineTransformMakeScale(self.contentViewScaleValue, self.contentViewScaleValue);
@@ -218,7 +221,11 @@
         
         [self.contentViewController endAppearanceTransition];
         [self.menuViewController endAppearanceTransition];
-        
+
+        if( self.blurBackgroundView )
+        {
+            self.backgroundBlurView.dynamic = NO;
+        }
         if (!self.visible && [self.delegate conformsToProtocol:@protocol(RESideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:didShowMenuViewController:)]) {
             [self.delegate sideMenu:self didShowMenuViewController:self.menuViewController];
         }
@@ -242,7 +249,13 @@
         [self.contentViewController beginAppearanceTransition:YES animated:YES];
     }
     
+    
+    if( self.blurBackgroundView )
+    {
+        self.backgroundBlurView.dynamic = YES;
+    }
     [[UIApplication sharedApplication] beginIgnoringInteractionEvents];
+    
     [UIView animateWithDuration:self.animationDuration animations:^{
         self.contentViewController.view.transform = CGAffineTransformIdentity;
         self.contentViewController.view.frame = self.view.bounds;
@@ -263,6 +276,11 @@
         
         [self.menuViewController endAppearanceTransition];
         [self.contentViewController endAppearanceTransition];
+        
+        if( self.blurBackgroundView )
+        {
+            self.backgroundBlurView.dynamic = NO;
+        }
         
         if (!self.visible && [self.delegate conformsToProtocol:@protocol(RESideMenuDelegate)] && [self.delegate respondsToSelector:@selector(sideMenu:didHideMenuViewController:)]) {
             [self.delegate sideMenu:self didHideMenuViewController:self.menuViewController];
