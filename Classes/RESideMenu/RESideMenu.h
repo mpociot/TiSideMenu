@@ -32,6 +32,9 @@
 
 @property (assign, readwrite, nonatomic) NSTimeInterval animationDuration;
 @property (strong, readwrite, nonatomic) UIImage *backgroundImage;
+@property (assign, readwrite, nonatomic) BOOL blurBackgroundView;
+@property (assign, readwrite, nonatomic) UIColor *tintColor;
+@property (assign, readwrite, nonatomic) CGFloat blurRadius;
 @property (assign, readwrite, nonatomic) BOOL panGestureEnabled;
 @property (assign, readwrite, nonatomic) BOOL scaleContentView;
 @property (assign, readwrite, nonatomic) BOOL scaleBackgroundImageView;

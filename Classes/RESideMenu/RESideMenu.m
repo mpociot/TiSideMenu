@@ -26,10 +26,12 @@
 #import "RESideMenu.h"
 #import "UIViewController+RESideMenu.h"
 #import "RECommonFunctions.h"
+#import "FXBlurView.h"
 
 @interface RESideMenu ()
 
 @property (strong, readwrite, nonatomic) UIImageView *backgroundImageView;
+@property (strong, readwrite, nonatomic) FXBlurView *backgroundBlurView;
 @property (assign, readwrite, nonatomic) BOOL visible;
 @property (assign, readwrite, nonatomic) CGPoint originalPoint;
 @property (strong, readwrite, nonatomic) UIButton *contentButton;
@@ -64,6 +66,8 @@
 #pragma clang diagnostic pop
     _animationDuration = 0.35f;
     _panGestureEnabled = YES;
+    _blurBackgroundView = YES;
+    _blurRadius         = 40.0f;
   
     _scaleContentView      = YES;
     _contentViewScaleValue = 0.7f;
@@ -98,6 +102,7 @@
         _contentViewInPortraitOffsetCenterX  = CGRectGetWidth(self.view.frame) + 30.f;
     
     self.view.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
     self.backgroundImageView = ({
         UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
         imageView.image = self.backgroundImage;
@@ -105,13 +110,29 @@
         imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         imageView;
     });
+    
+
+    [self.view addSubview:self.backgroundImageView];
+    
     self.contentButton = ({
         UIButton *button = [[UIButton alloc] initWithFrame:CGRectNull];
         [button addTarget:self action:@selector(hideMenuViewController) forControlEvents:UIControlEventTouchUpInside];
         button;
     });
     
-    [self.view addSubview:self.backgroundImageView];
+    if( self.blurBackgroundView )
+    {
+        self.backgroundBlurView = [[FXBlurView alloc] initWithFrame:self.view.bounds];
+        if( self.tintColor != nil )
+        {
+            self.backgroundBlurView.tintColor = self.tintColor;
+            NSLog(@"Tint color: %@",self.tintColor);
+        }
+        NSLog(@"Blur radius: %f",self.blurRadius);
+        self.backgroundBlurView.blurRadius = self.blurRadius;
+        [self.view addSubview:self.backgroundBlurView];
+    }
+    
     [self re_displayController:self.menuViewController frame:self.view.frame];
     [self re_displayController:self.contentViewController frame:self.view.frame];
     self.menuViewController.view.alpha = 0;
