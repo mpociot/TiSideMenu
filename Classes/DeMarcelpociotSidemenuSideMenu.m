@@ -8,6 +8,7 @@
 #import "DeMarcelpociotSidemenuSideMenu.h"
 #import "DeMarcelpociotSidemenuSideMenuProxy.h"
 #import "TiUtils.h"
+#import "TiApp.h"
 #import "TiViewController.h"
 #import "TiUIiOSNavWindowProxy.h"
 
@@ -53,7 +54,13 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
         controller = [[RESideMenu alloc] initWithContentViewController:centerWindow
                                                     menuViewController:menuViewController];
         
-        controller.backgroundImage = [TiUtils image:[self.proxy valueForUndefinedKey:@"backgroundImage"] proxy:self.proxy];
+        
+        bool blurView = [TiUtils boolValue:[self.proxy valueForUndefinedKey:@"blurBackground"] def:NO];
+        UIImage *backgroundImageView = [TiUtils image:[self.proxy valueForUndefinedKey:@"backgroundImage"] proxy:self.proxy];
+        controller.blurBackgroundView   = blurView;
+        controller.tintColor            = [TiUtils colorValue:[self.proxy valueForUndefinedKey:@"tintColor"]].color;
+        controller.blurRadius           = [TiUtils floatValue:[self.proxy valueForUndefinedKey:@"blurRadius"] def:40.0f];
+        controller.backgroundImage      = backgroundImageView;
         
         // Check creation time parameters
         // setContentViewScaleValue
@@ -66,7 +73,6 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
         [controller setScaleBackgroundImageView:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"scaleBackgroundImageView"] def:YES]];
         
         [controller setParallaxEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"parallaxEnabled"] def:YES]];
-        
         
         UIView * controllerView = [controller view];
         [controllerView setFrame:[self bounds]];
