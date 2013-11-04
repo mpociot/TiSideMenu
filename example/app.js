@@ -2,7 +2,8 @@ var TiSideMenu = require('de.marcelpociot.sidemenu');
 
 
 var menuWin = Ti.UI.createWindow({
-	backgroundColor:'transparent'
+	backgroundColor:'transparent',
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 });
 var leftTableView = Ti.UI.createTableView({
 	top: 100,
@@ -49,7 +50,7 @@ leftTableView.addEventListener("click", function(e){
 function createContentWindow()
 {
 	var contentWin = Ti.UI.createWindow({
-		backgroundColor:'#ddd',
+		backgroundColor:'transparent',
 		title:"RE Side Menu",
 		barColor:"#f7f7f7"
 	});
@@ -153,6 +154,7 @@ function createContentWindow()
 
 
 	var navController = Ti.UI.iOS.createNavigationWindow({
+		statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT,
 		window : contentWin
 	});
 	return navController;
@@ -166,7 +168,11 @@ var win = TiSideMenu.createSideMenu({
 	scaleContentView: true,
 	panGestureEnabled: false,
 	scaleBackgroundImageView: false,
-	parallaxEnabled: false
+	parallaxEnabled: false,
+	// Blur options
+	blurBackground: true,
+	tintColor: '#ffffff',
+	blurRadius: 20,
 });
 
 

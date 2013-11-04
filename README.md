@@ -29,7 +29,12 @@ Use TiSideMenu as a replacement for your root window.
 		scaleContentView: true,		
 		panGestureEnabled: false,	
 		scaleBackgroundImageView: false,
-		parallaxEnabled: false
+		parallaxEnabled: false,
+		// Blur settings
+		blurBackground: true,
+		tintColor: '#ffffff',
+		radius: 20,
+		iterations: 10
 	});
 	win.open();
 
@@ -101,6 +106,27 @@ Type: `Boolean`
 Default: `true`
 
 Enable / disable the parallax effect.
+
+#### blurBackground
+
+Type: `Boolean`  
+Default: `false`
+
+Enable / disable the iOS 7 blur effect on the background image.
+
+#### tintColor
+
+Type: `Color`  
+Default: `transparent`
+
+The tinting color used for the background image.
+
+#### blurRadius
+
+Type: `Float`  
+Default: `40`
+
+The radius used for blurring the background image.
 
 
 

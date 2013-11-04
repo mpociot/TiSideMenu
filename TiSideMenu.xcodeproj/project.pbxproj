@@ -22,6 +22,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		1E9D41C618283C7F00BFEAE8 /* FXBlurView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E9D41C418283C7F00BFEAE8 /* FXBlurView.h */; };
+		1E9D41C718283C7F00BFEAE8 /* FXBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E9D41C518283C7F00BFEAE8 /* FXBlurView.m */; };
 		1EA8BECD181C66B700880B36 /* RECommonFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BEC7181C66B700880B36 /* RECommonFunctions.h */; };
 		1EA8BECE181C66B700880B36 /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BEC8181C66B700880B36 /* RECommonFunctions.m */; };
 		1EA8BECF181C66B700880B36 /* RESideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BEC9181C66B700880B36 /* RESideMenu.h */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E9D41C418283C7F00BFEAE8 /* FXBlurView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		1E9D41C518283C7F00BFEAE8 /* FXBlurView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
 		1EA8BEC7181C66B700880B36 /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		1EA8BEC8181C66B700880B36 /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		1EA8BEC9181C66B700880B36 /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		08FB77AEFE84172EC02AAC07 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				1E9D41C318283C7F00BFEAE8 /* FXBlurView */,
 				1EA8BEC6181C66B700880B36 /* RESideMenu */,
 				24DE9E0F11C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h */,
 				24DE9E1011C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.m */,
@@ -124,6 +129,15 @@
 				1EA8BED8181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		1E9D41C318283C7F00BFEAE8 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				1E9D41C418283C7F00BFEAE8 /* FXBlurView.h */,
+				1E9D41C518283C7F00BFEAE8 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
 			sourceTree = "<group>";
 		};
 		1EA8BEC6181C66B700880B36 /* RESideMenu */ = {
@@ -163,6 +177,7 @@
 				1EA8BED1181C66B700880B36 /* UIViewController+RESideMenu.h in Headers */,
 				1EA8BECD181C66B700880B36 /* RECommonFunctions.h in Headers */,
 				1EA8BECF181C66B700880B36 /* RESideMenu.h in Headers */,
+				1E9D41C618283C7F00BFEAE8 /* FXBlurView.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +256,7 @@
 				24DD6CFA1134B3F500162E58 /* DeMarcelpociotSidemenuModule.m in Sources */,
 				1EA8BED2181C66B700880B36 /* UIViewController+RESideMenu.m in Sources */,
 				1EA8BECE181C66B700880B36 /* RECommonFunctions.m in Sources */,
+				1E9D41C718283C7F00BFEAE8 /* FXBlurView.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.m in Sources */,
 				1EA8BED6181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m in Sources */,
 			);
