@@ -96,12 +96,21 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
 -(void)setContentWindow_:(id)args
 {
 	ENSURE_UI_THREAD(setContentWindow_, args);
+    id window;
+    BOOL animated = FALSE;
+    if( [args respondsToSelector:@selector(objectForKey:)] )
+    {
+        window      = [args objectForKey:@"window"];
+        animated    = [TiUtils boolValue:[args objectForKey:@"animated"] def:FALSE];
+    } else {
+        window = args;
+    }
 	BOOL useNavController = FALSE;
-    if([[[args class] description] isEqualToString:@"TiUIiOSNavWindowProxy"]) {
+    if([[[window class] description] isEqualToString:@"TiUIiOSNavWindowProxy"]) {
         useNavController = TRUE;
     }
-    UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy(args) : ControllerForViewProxy(args);
-    [controller setContentViewController:centerWindow];
+    UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy(window) : ControllerForViewProxy(window);
+    [controller setContentViewController:centerWindow animated:animated];
 }
 
 -(void)setMenuWindow_:(id)args

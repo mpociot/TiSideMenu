@@ -37,6 +37,20 @@ Use TiSideMenu as a replacement for your root window.
 		iterations: 10
 	});
 	win.open();
+	
+### Replacing the content window
+
+* Setting the content window without animation `Default`
+
+		win.setContentWindow(newWin);
+	
+* Setting the content window with an animation
+
+		win.setContentWindow({
+				window: newWin,
+				animated: true 
+		});
+
 
 ### Configuration
 	

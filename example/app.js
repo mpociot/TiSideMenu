@@ -30,7 +30,10 @@ leftTableView.addEventListener("click", function(e){
 			var newWin = Ti.UI.createWindow({
 				backgroundColor:'red'
 			});
-			win.setContentWindow(newWin);
+			win.setContentWindow({
+				window: newWin,
+				animated: true 
+			});
 			win.hideMenuViewController();
 			break;
 		case 3:
@@ -166,9 +169,9 @@ var win = TiSideMenu.createSideMenu({
 	backgroundImage: 	'stars.png',
 	contentViewScaleValue: 0.2,
 	scaleContentView: true,
-	panGestureEnabled: false,
-	scaleBackgroundImageView: false,
-	parallaxEnabled: false,
+	panGestureEnabled: true,
+	scaleBackgroundImageView: true,
+	parallaxEnabled: true,
 	// Blur options
 	blurBackground: true,
 	tintColor: '#ffffff',
@@ -178,22 +181,22 @@ var win = TiSideMenu.createSideMenu({
 
 win.addEventListener("willShowMenuViewController",function()
 {
-	alert("Will show menu view controller");
+	//alert("Will show menu view controller");
 });
 
 win.addEventListener("didShowMenuViewController",function()
 {
-	alert("Did show menu view controller");
+	//alert("Did show menu view controller");
 });
 
 win.addEventListener("willHideMenuViewController",function()
 {
-	alert("Will hide menu view controller");
+	//alert("Will hide menu view controller");
 });
 
 win.addEventListener("didHideMenuViewController",function()
 {
-	alert("Did hide menu view controller");
+	//alert("Did hide menu view controller");
 });
 
 

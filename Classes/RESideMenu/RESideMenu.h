@@ -53,6 +53,7 @@
 @property (weak, readwrite, nonatomic) id<RESideMenuDelegate> delegate;
 
 - (id)initWithContentViewController:(UIViewController *)contentViewController menuViewController:(UIViewController *)menuViewController;
+- (void)setContentViewController:(UIViewController *)contentViewController animated:(BOOL)animated;
 - (void)presentMenuViewController;
 - (void)hideMenuViewController;
 
