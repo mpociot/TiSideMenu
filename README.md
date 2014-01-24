@@ -51,6 +51,12 @@ Use TiSideMenu as a replacement for your root window.
 				animated: true 
 		});
 
+### Known issues
+If the slide animation is enabled, a bug exists where an incomplete slide results in opening empty windows through a navigation / tabgroup. 
+To resolve this issue be sure to manually hide the side Menu before opening the new window.
+
+`win.hideMenuViewController();`
+
 
 ### Configuration
 	
