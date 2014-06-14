@@ -7,6 +7,9 @@ iOS 7 style side menu with parallax effect.
 
 Wrapper module for the great [RESideMenu](https://github.com/romaonthego/RESideMenu)
 
+Since 1.2 this module supports both left and right menu views.
+
+
 <img src="https://github.com/mpociot/TiSideMenu/raw/master/Demo.gif" alt="RESideMenu Screenshot" width="320" height="568" />
 
 ### Usage
@@ -17,19 +20,24 @@ Use TiSideMenu as a replacement for your root window.
 		background: 'red'
 	});
 	
-	var menuView    = Ti.UI.createWindow({
+	var leftMenuView    = Ti.UI.createWindow({
+		background: 'transparent'
+	});
+	var rightMenuView    = Ti.UI.createWindow({
 		background: 'transparent'
 	});
 	
 	var win = TiSideMenu.createSideMenu({
 		contentView: 		contentView,
-		menuView: 			menuView,
+		leftMenuView: 		leftMenuView,
+		rightMenuView: 		rightMenuView,
 		backgroundImage: 	'stars.png',
 		contentViewScaleValue: 0.2,
 		scaleContentView: true,		
 		panGestureEnabled: false,	
 		scaleBackgroundImageView: false,
 		parallaxEnabled: false,
+		panFromEdge: true,
 		// Blur settings
 		blurBackground: true,
 		tintColor: '#ffffff',
@@ -63,6 +71,9 @@ To resolve this issue be sure to manually hide the side Menu before opening the 
 * Enable / Disable the pan gesture 
 	`win.setPanGestureEnabled( true / false );`
 	
+* Enable / Disable then pan from the edge
+	`win.setPanFromEdge( true / false ); `
+
 * Enable / Disable Parallax effect	
 	`win.setParallaxEnabled( true / false ); `
 	
@@ -79,7 +90,9 @@ Manually showing / hiding the menu:
 
 `win.hideMenuViewController()`
 
-`win.presentMenuViewController()`
+`win.presentLeftMenuViewController()`
+
+`win.presentRightMenuViewController()`
 
 ### Options
 
@@ -112,6 +125,13 @@ Type: `Boolean`
 Default: `true`
 
 Should the pan gesture be available for showing the menu.
+
+#### panFromEdge
+
+Type: `Boolean`  
+Default: `false`
+
+Should the pan gesture only trigger when it starts from the edge
 
 #### scaleBackgroundImageView
 

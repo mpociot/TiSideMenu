@@ -1,7 +1,7 @@
 var TiSideMenu = require('de.marcelpociot.sidemenu');
 
 
-var menuWin = Ti.UI.createWindow({
+var leftMenuWin = Ti.UI.createWindow({
 	backgroundColor:'transparent',
 	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
 });
@@ -18,7 +18,28 @@ var leftTableView = Ti.UI.createTableView({
 		{title:'Reset Window',color: 'white'}
 	]
 });
-menuWin.add(leftTableView);
+leftMenuWin.add(leftTableView);
+
+
+var rightMenuWin = Ti.UI.createWindow({
+	backgroundColor:'transparent',
+	statusBarStyle: Titanium.UI.iPhone.StatusBar.LIGHT_CONTENT
+});
+var rightTableView = Ti.UI.createTableView({
+	top: 100,
+	font:{fontSize:12,color: '#ffffff'},
+	rowHeight:40,
+	backgroundColor:'transparent',
+	data:[
+		{title:'Row 1',color: 'white'},
+		{title:'Row 2',color: 'white'},  
+		{title:'Change Center Window',color: 'white'},
+		{title:'Push new Window',color: 'white'},
+		{title:'Reset Window',color: 'white'}
+	]
+});
+rightMenuWin.add(rightTableView);
+
 leftTableView.addEventListener("click", function(e){
 	switch(e.index){
 		case 0:
@@ -57,13 +78,22 @@ function createContentWindow()
 		title:"RE Side Menu",
 		barColor:"#f7f7f7"
 	});
-	toggleMenuBtn = Ti.UI.createButton({
-		title: 'MENU'
+	toggleLeftMenuBtn = Ti.UI.createButton({
+		title: 'LEFT'
 	});
-	contentWin.leftNavButton = toggleMenuBtn;
-	toggleMenuBtn.addEventListener('click',function(e)
+	contentWin.leftNavButton = toggleLeftMenuBtn;
+	toggleLeftMenuBtn.addEventListener('click',function(e)
 	{
-		win.presentMenuViewController();
+		win.presentLeftMenuViewController();
+	});
+
+	toggleRightMenuBtn = Ti.UI.createButton({
+		title: 'RIGHT'
+	});
+	contentWin.rightNavButton = toggleRightMenuBtn;
+	toggleRightMenuBtn.addEventListener('click',function(e)
+	{
+		win.presentRightMenuViewController();
 	});
 
 	// Module settings
@@ -165,11 +195,13 @@ function createContentWindow()
 var contentWindow = createContentWindow();
 var win = TiSideMenu.createSideMenu({
 	contentView: 		contentWindow,
-	menuView: 			menuWin,
+	leftMenuView: 		leftMenuWin,
+	rightMenuView: 		rightMenuWin,
 	backgroundImage: 	'stars.png',
 	contentViewScaleValue: 0.2,
 	scaleContentView: true,
 	panGestureEnabled: true,
+	panFromEdge: true,
 	scaleBackgroundImageView: true,
 	parallaxEnabled: true,
 	// Blur options

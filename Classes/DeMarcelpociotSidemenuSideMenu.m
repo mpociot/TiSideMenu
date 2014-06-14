@@ -48,11 +48,14 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
         // navController or TiWindow ?
         UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]) : ControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]);
         
-		TiViewProxy *leftWindow                 = [self.proxy valueForUndefinedKey:@"menuView"];
-        UIViewController *menuViewController    = ControllerForViewProxy(leftWindow);
+		TiViewProxy *leftWindow                 = [self.proxy valueForUndefinedKey:@"leftMenuView"];
+		TiViewProxy *rightWindow                = [self.proxy valueForUndefinedKey:@"rightMenuView"];
+        UIViewController *leftMenuViewController    = ControllerForViewProxy(leftWindow);
+        UIViewController *rightMenuViewController    = ControllerForViewProxy(rightWindow);
         
-        controller = [[RESideMenu alloc] initWithContentViewController:centerWindow
-                                                    menuViewController:menuViewController];
+        controller = [[RESideMenu alloc]    initWithContentViewController:centerWindow
+                                                   leftMenuViewController:leftMenuViewController
+                                                  rightMenuViewController:rightMenuViewController];
         
         
         bool blurView = [TiUtils boolValue:[self.proxy valueForUndefinedKey:@"blurBackground"] def:NO];
@@ -113,11 +116,18 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
     [controller setContentViewController:centerWindow animated:animated];
 }
 
--(void)setMenuWindow_:(id)args
+-(void)setLeftMenuWindow_:(id)args
 {
-	ENSURE_UI_THREAD(setMenuWindow_, args);
-	ENSURE_SINGLE_ARG(args, TiViewProxy);
-	[controller setMenuViewController:args];
+    ENSURE_UI_THREAD(setLeftMenuWindow_, args);
+    ENSURE_SINGLE_ARG(args, TiViewProxy);
+    [controller setLeftMenuViewController:args];
+}
+
+-(void)setRightMenuWindow_:(id)args
+{
+    ENSURE_UI_THREAD(setRightMenuWindow_, args);
+    ENSURE_SINGLE_ARG(args, TiViewProxy);
+    [controller setRightMenuViewController:args];
 }
 
 -(void)setContentViewScaleValue_:(id)args
@@ -138,6 +148,19 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
     [controller setPanGestureEnabled:[TiUtils boolValue:args]];
 }
 
+-(void)setPanFromEdge_:(id)args
+{
+    ENSURE_UI_THREAD(setPanFromEdge_, args);
+    [controller setPanFromEdge:[TiUtils boolValue:args]];
+}
+
+-(void)setMenuPrefersStatusBarHidden_:(id)args
+{
+    ENSURE_UI_THREAD(setMenuPrefersStatusBarHidden_, args);
+    [controller setMenuPrefersStatusBarHidden:[TiUtils boolValue:args]];
+}
+
+
 -(void)setScaleBackgroundImageView_:(id)args
 {
     ENSURE_UI_THREAD(setScaleBackgroundImageView_, args);
@@ -151,10 +174,15 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
 }
 
 #pragma API
--(void)presentMenuViewController:(id)args
+-(void)presentLeftMenuViewController:(id)args
 {
-    ENSURE_UI_THREAD(presentMenuViewController,args);
-    [controller presentMenuViewController];
+    ENSURE_UI_THREAD(presentLeftMenuViewController,args);
+    [controller presentLeftMenuViewController];
+}
+-(void)presentRightMenuViewController:(id)args
+{
+    ENSURE_UI_THREAD(presentRightMenuViewController,args);
+    [controller presentRightMenuViewController];
 }
 
 -(void)hideMenuViewController:(id)args

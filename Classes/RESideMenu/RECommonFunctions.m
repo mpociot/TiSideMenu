@@ -2,7 +2,7 @@
 // RECommonFunctions.m
 // RESideMenu
 //
-// Copyright (c) 2013 Roman Efimov (https://github.com/romaonthego)
+// Copyright (c) 2013-2014 Roman Efimov (https://github.com/romaonthego)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -25,12 +25,8 @@
 
 #import "RECommonFunctions.h"
 #import <UIKit/UIKit.h>
-BOOL REDeviceIsUIKit7()
-{
-    return REUIKitIsFlatMode();
-}
 
-BOOL REUIKitIsFlatMode()
+BOOL RESideMenuUIKitIsFlatMode(void)
 {
     static BOOL isUIKitFlatMode = NO;
     static dispatch_once_t onceToken;

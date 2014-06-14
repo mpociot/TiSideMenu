@@ -2,7 +2,7 @@
 // UIViewController+RESideMenu.m
 // RESideMenu
 //
-// Copyright (c) 2013 Roman Efimov (https://github.com/romaonthego)
+// Copyright (c) 2013-2014 Roman Efimov (https://github.com/romaonthego)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -26,22 +26,7 @@
 #import "UIViewController+RESideMenu.h"
 #import "RESideMenu.h"
 
-@implementation UIViewController (REFrostedViewController)
-
-- (void)re_displayController:(UIViewController *)controller frame:(CGRect)frame
-{
-    [self addChildViewController:controller];
-    controller.view.frame = frame;
-    [self.view addSubview:controller.view];
-    [controller didMoveToParentViewController:self];
-}
-
-- (void)re_hideController:(UIViewController *)controller
-{
-    [controller willMoveToParentViewController:nil];
-    [controller.view removeFromSuperview];
-    [controller removeFromParentViewController];
-}
+@implementation UIViewController (RESideMenu)
 
 - (RESideMenu *)sideMenuViewController
 {
@@ -56,6 +41,19 @@
         }
     }
     return nil;
+}
+
+#pragma mark -
+#pragma mark IB Action Helper methods
+
+- (IBAction)presentLeftMenuViewController:(id)sender
+{
+    [self.sideMenuViewController presentLeftMenuViewController];
+}
+
+- (IBAction)presentRightMenuViewController:(id)sender
+{
+    [self.sideMenuViewController presentRightMenuViewController];
 }
 
 @end
