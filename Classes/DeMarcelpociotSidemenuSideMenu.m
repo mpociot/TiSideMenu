@@ -12,9 +12,9 @@
 #import "TiViewController.h"
 #import "TiUIiOSNavWindowProxy.h"
 
-UIViewController * ControllerForViewProxy(TiViewProxy * proxy);
+UIViewController * TiSideMenuControllerForViewProxy(TiViewProxy * proxy);
 
-UIViewController * ControllerForViewProxy(TiViewProxy * proxy)
+UIViewController * TiSideMenuControllerForViewProxy(TiViewProxy * proxy)
 {
     [[proxy view] setAutoresizingMask:UIViewAutoresizingNone];
     
@@ -27,7 +27,7 @@ UIViewController * ControllerForViewProxy(TiViewProxy * proxy)
     return [[TiViewController alloc] initWithViewProxy:proxy];
 }
 
-UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy *proxy)
+UINavigationController * TiSideMenuNavigationControllerForViewProxy(TiUIiOSNavWindowProxy *proxy)
 {
     return [proxy controller];
 }
@@ -46,12 +46,12 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
         }
         
         // navController or TiWindow ?
-        UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]) : ControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]);
+        UIViewController *centerWindow = useNavController ? TiSideMenuNavigationControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]) : TiSideMenuControllerForViewProxy([self.proxy valueForUndefinedKey:@"contentView"]);
         
 		TiViewProxy *leftWindow                 = [self.proxy valueForUndefinedKey:@"leftMenuView"];
 		TiViewProxy *rightWindow                = [self.proxy valueForUndefinedKey:@"rightMenuView"];
-        UIViewController *leftMenuViewController    = ControllerForViewProxy(leftWindow);
-        UIViewController *rightMenuViewController    = ControllerForViewProxy(rightWindow);
+        UIViewController *leftMenuViewController    = TiSideMenuControllerForViewProxy(leftWindow);
+        UIViewController *rightMenuViewController    = TiSideMenuControllerForViewProxy(rightWindow);
         
         controller = [[RESideMenu alloc]    initWithContentViewController:centerWindow
                                                    leftMenuViewController:leftMenuViewController
@@ -112,7 +112,7 @@ UINavigationController * NavigationControllerForViewProxy(TiUIiOSNavWindowProxy 
     if([[[window class] description] isEqualToString:@"TiUIiOSNavWindowProxy"]) {
         useNavController = TRUE;
     }
-    UIViewController *centerWindow = useNavController ? NavigationControllerForViewProxy(window) : ControllerForViewProxy(window);
+    UIViewController *centerWindow = useNavController ? TiSideMenuNavigationControllerForViewProxy(window) : TiSideMenuControllerForViewProxy(window);
     [controller setContentViewController:centerWindow animated:animated];
 }
 

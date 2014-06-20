@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.2
+version: 1.2.1
 apiversion: 3
 description: My module
 author: Marcel Pociot
