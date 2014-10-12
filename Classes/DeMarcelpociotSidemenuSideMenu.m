@@ -60,9 +60,7 @@ UINavigationController * TiSideMenuNavigationControllerForViewProxy(TiUIiOSNavWi
         
         bool blurView = [TiUtils boolValue:[self.proxy valueForUndefinedKey:@"blurBackground"] def:NO];
         UIImage *backgroundImageView = [TiUtils image:[self.proxy valueForUndefinedKey:@"backgroundImage"] proxy:self.proxy];
-        controller.blurBackgroundView   = blurView;
         controller.tintColor            = [TiUtils colorValue:[self.proxy valueForUndefinedKey:@"tintColor"]].color;
-        controller.blurRadius           = [TiUtils floatValue:[self.proxy valueForUndefinedKey:@"blurRadius"] def:40.0f];
         controller.backgroundImage      = backgroundImageView;
         
         // Check creation time parameters
@@ -76,7 +74,7 @@ UINavigationController * TiSideMenuNavigationControllerForViewProxy(TiUIiOSNavWi
         [controller setScaleBackgroundImageView:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"scaleBackgroundImageView"] def:YES]];
         
         [controller setParallaxEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"parallaxEnabled"] def:YES]];
-        
+
         UIView * controllerView = [controller view];
         [controllerView setFrame:[self bounds]];
         [self addSubview:controllerView];

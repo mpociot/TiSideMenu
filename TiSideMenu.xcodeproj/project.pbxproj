@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -34,6 +34,9 @@
 		1EA8BED6181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BED4181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m */; };
 		1EA8BED9181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h in Headers */ = {isa = PBXBuildFile; fileRef = 1EA8BED7181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h */; };
 		1EA8BEDA181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EA8BED8181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m */; };
+		1EF4025B19E5E67E00DC7692 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF4025A19E5E67E00DC7692 /* QuartzCore.framework */; };
+		1EF4025D19E5E68300DC7692 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF4025C19E5E68300DC7692 /* Accelerate.framework */; };
+		1EF4025F19E5E68800DC7692 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF4025E19E5E68800DC7692 /* CoreImage.framework */; };
 		24DD6CF91134B3F500162E58 /* DeMarcelpociotSidemenuModule.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DD6CF71134B3F500162E58 /* DeMarcelpociotSidemenuModule.h */; };
 		24DD6CFA1134B3F500162E58 /* DeMarcelpociotSidemenuModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DD6CF81134B3F500162E58 /* DeMarcelpociotSidemenuModule.m */; };
 		24DE9E1111C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h in Headers */ = {isa = PBXBuildFile; fileRef = 24DE9E0F11C5FE74003F90F6 /* DeMarcelpociotSidemenuModuleAssets.h */; };
@@ -65,6 +68,9 @@
 		1EA8BED4181C689B00880B36 /* DeMarcelpociotSidemenuSideMenuProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeMarcelpociotSidemenuSideMenuProxy.m; path = Classes/DeMarcelpociotSidemenuSideMenuProxy.m; sourceTree = "<group>"; };
 		1EA8BED7181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeMarcelpociotSidemenuSideMenu.h; path = Classes/DeMarcelpociotSidemenuSideMenu.h; sourceTree = "<group>"; };
 		1EA8BED8181C68AD00880B36 /* DeMarcelpociotSidemenuSideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeMarcelpociotSidemenuSideMenu.m; path = Classes/DeMarcelpociotSidemenuSideMenu.m; sourceTree = "<group>"; };
+		1EF4025A19E5E67E00DC7692 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1EF4025C19E5E68300DC7692 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		1EF4025E19E5E68800DC7692 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		24DD6CF71134B3F500162E58 /* DeMarcelpociotSidemenuModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DeMarcelpociotSidemenuModule.h; path = Classes/DeMarcelpociotSidemenuModule.h; sourceTree = "<group>"; };
 		24DD6CF81134B3F500162E58 /* DeMarcelpociotSidemenuModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DeMarcelpociotSidemenuModule.m; path = Classes/DeMarcelpociotSidemenuModule.m; sourceTree = "<group>"; };
 		24DD6D1B1134B66800162E58 /* titanium.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = titanium.xcconfig; sourceTree = "<group>"; };
@@ -80,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EF4025F19E5E68800DC7692 /* CoreImage.framework in Frameworks */,
+				1EF4025D19E5E68300DC7692 /* Accelerate.framework in Frameworks */,
+				1EF4025B19E5E67E00DC7692 /* QuartzCore.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +118,9 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1EF4025E19E5E68800DC7692 /* CoreImage.framework */,
+				1EF4025C19E5E68300DC7692 /* Accelerate.framework */,
+				1EF4025A19E5E67E00DC7692 /* QuartzCore.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -208,9 +220,10 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "TiSideMenu" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -297,6 +310,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = (
 					"-DDEBUG",
@@ -335,7 +349,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
@@ -369,6 +383,8 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
 					"-DTI_POST_1_2",
@@ -405,7 +421,7 @@
 				GCC_WARN_UNUSED_VALUE = NO;
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				OTHER_CFLAGS = "-DTI_POST_1_2";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = DeMarcelpociotSidemenu;
@@ -422,6 +438,7 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Build & test";
 			};
 			name = Debug;
@@ -433,6 +450,7 @@
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "Build & test";
 				ZERO_LINK = NO;
 			};

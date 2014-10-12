@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>12C60D2F-4D88-46A3-8C62-2FE051DA982F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TiSideMenu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>762DA8BD60B7A5B61218D312214DCEA723E36090</key>
+		<string>ssh://github.com/mpociot/TiSideMenu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TiSideMenu.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>762DA8BD60B7A5B61218D312214DCEA723E36090</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/mpociot/TiSideMenu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>762DA8BD60B7A5B61218D312214DCEA723E36090</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>762DA8BD60B7A5B61218D312214DCEA723E36090</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TiSideMenu</string>
+		</dict>
+	</array>
+</dict>
+</plist>

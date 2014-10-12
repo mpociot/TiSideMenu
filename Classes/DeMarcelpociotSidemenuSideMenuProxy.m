@@ -12,6 +12,10 @@
 
 @implementation DeMarcelpociotSidemenuSideMenuProxy
 
+-(void)windowDidOpen {
+    [super windowDidOpen];
+    [self reposition];
+}
 
 -(UIViewController *)_controller {
 	return [(DeMarcelpociotSidemenuSideMenu*)[self view] controller];

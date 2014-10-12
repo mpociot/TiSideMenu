@@ -205,9 +205,10 @@ var win = TiSideMenu.createSideMenu({
 	scaleBackgroundImageView: true,
 	parallaxEnabled: true,
 	// Blur options
-	blurBackground: true,
+	blurBackground: false,
 	tintColor: '#ffffff',
-	blurRadius: 20,
+	blurRadius: 0,
+	iterations: 0
 });
 
 
