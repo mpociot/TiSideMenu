@@ -53,7 +53,12 @@ Use TiSideMenu as a replacement for your root window.
 				window: newWin,
 				animated: true 
 		});
+		
+### Alloy
 
+To use this module within Alloy, please take a look at this repository: [de.marcelpociot.alloysidemenu](https://github.com/manumaticx/de.marcelpociot.alloysidemenu)
+	
+		
 ### Known issues
 If the slide animation is enabled, a bug exists where an incomplete slide results in opening empty windows through a navigation / tabgroup. 
 To resolve this issue be sure to manually hide the side Menu before opening the new window.
