@@ -71,6 +71,10 @@ UINavigationController * TiSideMenuNavigationControllerForViewProxy(TiUIiOSNavWi
         
         [controller setPanGestureEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"panGestureEnabled"] def:YES]];
         
+        [controller setLeftPanEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"leftPanEnabled"] def:YES]];
+
+        [controller setRightPanEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"rightPanEnabled"] def:YES]];
+
         [controller setScaleBackgroundImageView:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"scaleBackgroundImageView"] def:YES]];
         
         [controller setParallaxEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"parallaxEnabled"] def:YES]];
@@ -169,6 +173,18 @@ UINavigationController * TiSideMenuNavigationControllerForViewProxy(TiUIiOSNavWi
 {
     ENSURE_UI_THREAD(setParallaxEnabled_, args);
     [controller setParallaxEnabled:[TiUtils boolValue:args]];
+}
+
+-(void)setLeftPanEnabled_:(id)args
+{
+    ENSURE_UI_THREAD(setLeftPanEnabled_, args);
+    [controller setLeftPanEnabled:[TiUtils boolValue:args]];
+}
+
+-(void)setRightPanEnabled_:(id)args
+{
+    ENSURE_UI_THREAD(setRightPanEnabled_, args);
+    [controller setRightPanEnabled:[TiUtils boolValue:args]];
 }
 
 #pragma API
