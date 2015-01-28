@@ -70,6 +70,12 @@ To resolve this issue be sure to manually hide the side Menu before opening the 
 	
 * Enable / Disable the pan gesture 
 	`win.setPanGestureEnabled( true / false );`
+
+* Enable / Disable pan from left
+	`win.setLeftPanEnabled( true / false );`
+
+* Enable / Disable pan from right
+	`win.setRightPanEnabled( true / false );`
 	
 * Enable / Disable then pan from the edge
 	`win.setPanFromEdge( true / false ); `
@@ -125,6 +131,20 @@ Type: `Boolean`
 Default: `true`
 
 Should the pan gesture be available for showing the menu.
+
+#### leftPanEnabled
+
+Type: `Boolean`
+Default: `true`
+
+Enable / Disable pan from left.
+
+#### rightPanEnabled
+
+Type: `Boolean`
+Default: `true`
+
+Enable / Disable pan from right.
 
 #### panFromEdge
 

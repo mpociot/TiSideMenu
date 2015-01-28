@@ -104,6 +104,8 @@
     _bouncesHorizontally = YES;
     
     _panGestureEnabled = YES;
+    _leftPanEnabled = YES;
+    _rightPanEnabled = YES;
     _panFromEdge = YES;
     _panMinimumOpenThreshold = 60.0;
     
@@ -550,6 +552,13 @@
     }
     
     CGPoint point = [recognizer translationInView:self.view];
+
+    if (point.x <= 0 && !self.rightPanEnabled && !self.leftMenuVisible) {
+        return;
+    }
+    if (point.x > 0 && !self.leftPanEnabled && !self.rightMenuVisible) {
+        return;
+    }
     
     if (recognizer.state == UIGestureRecognizerStateBegan) {
         [self updateContentViewShadow];
