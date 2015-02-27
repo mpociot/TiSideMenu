@@ -87,8 +87,8 @@ To resolve this issue be sure to manually hide the side Menu before opening the 
 * Enable / Disable Background image scaling
 	`win.setScaleBackgroundImageView( true / false );`
 	
-* Enable / Disable Background menu view scaling
-	`win.setScaleBackgroundMenuView( true / false );`
+* Enable / Disable menu view scaling
+	`win.setScaleMenuView( true / false );`
 	
 * Enable / Disable Content view scaling
 	`win.setScaleContentView( true / false );`
