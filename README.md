@@ -36,8 +36,7 @@ Use TiSideMenu as a replacement for your root window.
 		scaleContentView: true,		
 		panGestureEnabled: false,	
 		scaleBackgroundImageView: false,
-		scaleMenuView: false,
-        scaleMenuView: true,		
+		scaleMenuView: true,		
 		parallaxEnabled: false,
 		panFromEdge: true,
 	});
