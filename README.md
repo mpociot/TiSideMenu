@@ -36,6 +36,7 @@ Use TiSideMenu as a replacement for your root window.
 		scaleContentView: true,		
 		panGestureEnabled: false,	
 		scaleBackgroundImageView: false,
+		scaleMenuView: false,
         scaleMenuView: true,		
 		parallaxEnabled: false,
 		panFromEdge: true,
@@ -86,6 +87,9 @@ To resolve this issue be sure to manually hide the side Menu before opening the 
 	
 * Enable / Disable Background image scaling
 	`win.setScaleBackgroundImageView( true / false );`
+	
+* Enable / Disable Background menu view scaling
+	`win.setScaleBackgroundMenuView( true / false );`
 	
 * Enable / Disable Content view scaling
 	`win.setScaleContentView( true / false );`
@@ -160,6 +164,13 @@ Type: `Boolean`
 Default: `true`
 
 Should the background image view be scaled for showing the menu.
+
+#### scaleMenuView
+
+Type: `Boolean`  
+Default: `true`
+
+Should the menu view be scaled as it is made visible.
 
 #### parallaxEnabled
 
