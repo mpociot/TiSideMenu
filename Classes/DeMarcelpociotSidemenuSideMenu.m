@@ -77,6 +77,8 @@ UINavigationController * TiSideMenuNavigationControllerForViewProxy(TiUIiOSNavWi
 
         [controller setScaleBackgroundImageView:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"scaleBackgroundImageView"] def:YES]];
         
+        [controller setScaleMenuView:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"scaleMenuView"] def:YES]];
+        
         [controller setParallaxEnabled:[TiUtils boolValue:[self.proxy valueForUndefinedKey:@"parallaxEnabled"] def:YES]];
 
         UIView * controllerView = [controller view];
@@ -167,6 +169,12 @@ UINavigationController * TiSideMenuNavigationControllerForViewProxy(TiUIiOSNavWi
 {
     ENSURE_UI_THREAD(setScaleBackgroundImageView_, args);
     [controller setScaleBackgroundImageView:[TiUtils boolValue:args]];
+}
+
+-(void)setScaleMenuView_:(id)args
+{
+    ENSURE_UI_THREAD(setScaleMenuView_, args);
+    [controller setScaleMenuView:[TiUtils boolValue:args]];
 }
 
 -(void)setParallaxEnabled_:(id)args

@@ -78,7 +78,7 @@ function createContentWindow()
 		title:"RE Side Menu",
 		barColor:"#f7f7f7"
 	});
-	toggleLeftMenuBtn = Ti.UI.createButton({
+	var toggleLeftMenuBtn = Ti.UI.createButton({
 		title: 'LEFT'
 	});
 	contentWin.leftNavButton = toggleLeftMenuBtn;
@@ -87,7 +87,7 @@ function createContentWindow()
 		win.presentLeftMenuViewController();
 	});
 
-	toggleRightMenuBtn = Ti.UI.createButton({
+	var toggleRightMenuBtn = Ti.UI.createButton({
 		title: 'RIGHT'
 	});
 	contentWin.rightNavButton = toggleRightMenuBtn;
@@ -97,12 +97,12 @@ function createContentWindow()
 	});
 
 	// Module settings
-	scaleContentViewLabel = Ti.UI.createLabel({
+	var scaleContentViewLabel = Ti.UI.createLabel({
 		text: 'Scale content view:',
 		top: 50,
 		left: 10
-	})
-	scaleContentViewBtn = Ti.UI.createSwitch({
+	});
+	var scaleContentViewBtn = Ti.UI.createSwitch({
 		value: true,
 		top: 50,
 		right: 10
@@ -115,12 +115,12 @@ function createContentWindow()
 	});
 
 
-	scaleBackgroundImageViewLabel = Ti.UI.createLabel({
+	var scaleBackgroundImageViewLabel = Ti.UI.createLabel({
 		text: 'Scale background image:',
 		top: 100,
 		left: 10
-	})
-	scaleBackgroundImageViewBtn = Ti.UI.createSwitch({
+	});
+	var scaleBackgroundImageViewBtn = Ti.UI.createSwitch({
 		value: true,
 		top: 100,
 		right: 10
@@ -132,14 +132,31 @@ function createContentWindow()
 		win.setScaleBackgroundImageView( scaleBackgroundImageViewBtn.value );
 	});
 
-	parallaxLabel = Ti.UI.createLabel({
-		text: 'Parallax enabled:',
+	var scaleMenuViewLabel = Ti.UI.createLabel({
+		text: 'Scale menu view:',
 		top: 150,
 		left: 10
-	})
-	parallaxBtn = Ti.UI.createSwitch({
+	});
+	var scaleMenuViewBtn = Ti.UI.createSwitch({
 		value: true,
 		top: 150,
+		right: 10
+	});
+	contentWin.add( scaleMenuViewLabel );
+	contentWin.add( scaleMenuViewBtn );
+	scaleMenuViewBtn.addEventListener('change',function(e)
+	{
+		win.setScaleMenuView( scaleMenuViewBtn.value );
+	});
+
+	var parallaxLabel = Ti.UI.createLabel({
+		text: 'Parallax enabled:',
+		top: 200,
+		left: 10
+	});
+	var parallaxBtn = Ti.UI.createSwitch({
+		value: true,
+		top: 200,
 		right: 10
 	});
 	contentWin.add( parallaxLabel );
@@ -150,14 +167,14 @@ function createContentWindow()
 	});
 
 
-	panLabel = Ti.UI.createLabel({
+	var panLabel = Ti.UI.createLabel({
 		text: 'Pan gesture enabled:',
-		top: 200,
+		top: 250,
 		left: 10
 	});
-	panBtn = Ti.UI.createSwitch({
+	var panBtn = Ti.UI.createSwitch({
 		value: true,
-		top: 200,
+		top: 250,
 		right: 10
 	});
 	contentWin.add( panLabel );
@@ -167,13 +184,13 @@ function createContentWindow()
 		win.setPanGestureEnabled( panBtn.value );
 	});
 
-	scaleLabel = Ti.UI.createLabel({
+	var scaleLabel = Ti.UI.createLabel({
 		text: 'Content View scale:',
-		top: 250,
+		top: 300,
 		left: 10
-	})
+	});
 	var scaleSlider = Titanium.UI.createSlider({
-    	top: 290,
+    	top: 340,
     	min: 0,
     	max: 100,
     	width: '100%',
@@ -203,6 +220,7 @@ var win = TiSideMenu.createSideMenu({
 	panGestureEnabled: true,
 	panFromEdge: true,
 	scaleBackgroundImageView: true,
+	scaleMenuView: true,
 	parallaxEnabled: true,
 	// Blur options
 	blurBackground: false,
