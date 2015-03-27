@@ -10,7 +10,7 @@ Wrapper module for the great [RESideMenu](https://github.com/romaonthego/RESideM
 Since 1.2 this module supports both left and right menu views.
 
 
-<img src="https://github.com/mpociot/TiSideMenu/raw/master/Demo.gif" alt="RESideMenu Screenshot" width="320" height="568" />
+<img src="https://raw.githubusercontent.com/mpociot/TiSideMenu/master/Demo.gif" alt="RESideMenu Screenshot" width="320" height="568" />
 
 ### Usage
 
