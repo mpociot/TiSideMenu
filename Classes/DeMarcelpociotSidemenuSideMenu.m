@@ -16,6 +16,9 @@ UIViewController * TiSideMenuControllerForViewProxy(TiViewProxy * proxy);
 
 UIViewController * TiSideMenuControllerForViewProxy(TiViewProxy * proxy)
 {
+    if (proxy == nil) {
+        return nil;
+    }
     [[proxy view] setAutoresizingMask:UIViewAutoresizingNone];
     
     //make the proper resize !
