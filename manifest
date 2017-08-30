@@ -2,12 +2,12 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 2.2
-apiversion: 3
+version: 2.3.0
+apiversion: 2
 description: My module
 author: Marcel Pociot
 license: MIT
-copyright: Copyright (c) 2013-2014 by Marcel Pociot
+copyright: Copyright (c) 2013-present by Marcel Pociot
 
 
 # these should not be edited
@@ -15,5 +15,5 @@ name: TiSideMenu
 moduleid: de.marcelpociot.sidemenu
 guid: 544290ca-7102-4cf4-8b20-feedb53f2045
 platform: iphone
-minsdk: 3.4.0.GA
+minsdk: 6.0.1.GA
 architectures: armv7 arm64 i386 x86_64
