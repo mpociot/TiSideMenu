@@ -2,12 +2,12 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 2.3
+version: 2.3.0
 apiversion: 2
 description: My module
 author: Marcel Pociot
 license: MIT
-copyright: Copyright (c) 2013-2014 by Marcel Pociot
+copyright: Copyright (c) 2013-present by Marcel Pociot
 
 
 # these should not be edited
