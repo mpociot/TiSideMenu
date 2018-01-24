@@ -17,7 +17,8 @@ UIViewController * ControllerForProxy(TiViewProxy * proxy);
 }
 -(RESideMenu*)controller;
 
--(void)presentMenuViewController:(id)args;
+-(void)presentLeftMenuViewController:(id)args;
+-(void)presentRightMenuViewController:(id)args;
 -(void)hideMenuViewController:(id)args;
 
 
