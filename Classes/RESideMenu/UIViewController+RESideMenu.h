@@ -2,7 +2,7 @@
 // UIViewController+RESideMenu.h
 // RESideMenu
 //
-// Copyright (c) 2013 Roman Efimov (https://github.com/romaonthego)
+// Copyright (c) 2013-2014 Roman Efimov (https://github.com/romaonthego)
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
@@ -31,7 +31,9 @@
 
 @property (strong, readonly, nonatomic) RESideMenu *sideMenuViewController;
 
-- (void)re_displayController:(UIViewController *)controller frame:(CGRect)frame;
-- (void)re_hideController:(UIViewController *)controller;
+// IB Action Helper methods
+
+- (IBAction)presentLeftMenuViewController:(id)sender;
+- (IBAction)presentRightMenuViewController:(id)sender;
 
 @end

@@ -12,6 +12,10 @@
 
 @implementation DeMarcelpociotSidemenuSideMenuProxy
 
+-(void)windowDidOpen {
+    [super windowDidOpen];
+    [self reposition];
+}
 
 -(UIViewController *)_controller {
 	return [(DeMarcelpociotSidemenuSideMenu*)[self view] controller];
@@ -23,8 +27,11 @@
 
 # pragma API
 
--(void)presentMenuViewController:(id)args {
-    TiThreadPerformOnMainThread(^{[(DeMarcelpociotSidemenuSideMenu*)[self view] presentMenuViewController:args];}, NO);
+-(void)presentLeftMenuViewController:(id)args {
+    TiThreadPerformOnMainThread(^{[(DeMarcelpociotSidemenuSideMenu*)[self view] presentLeftMenuViewController:args];}, NO);
+}
+-(void)presentRightMenuViewController:(id)args {
+    TiThreadPerformOnMainThread(^{[(DeMarcelpociotSidemenuSideMenu*)[self view] presentRightMenuViewController:args];}, NO);
 }
 
 -(void)hideMenuViewController:(id)args {
